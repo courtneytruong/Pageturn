@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Pageturn.API/Pageturn.API.csproj" />
+  <Project Path="Pageturn.Core/Pageturn.Core.csproj" />
+  <Project Path="Pageturn.Infrastructure/Pageturn.Infrastructure.csproj" />
+  <Project Path="Pageturn.Tests/Pageturn.Tests.csproj" />
+</Solution>
