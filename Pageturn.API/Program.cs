@@ -7,6 +7,7 @@ using Pageturn.API.Middleware;
 using Pageturn.Core.Interfaces;
 using Pageturn.Infrastructure;
 using Pageturn.Infrastructure.Repositories;
+using Pageturn.Infrastructure.Services;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +25,9 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IUserBookRepository, UserBookRepository>();
 builder.Services.AddScoped<IPostRepository, PostRepository>();
+
+// Services
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 // CORS
 var corsOrigin = builder.Configuration["CORS_ORIGIN"] ?? "http://localhost:5173";
