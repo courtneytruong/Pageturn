@@ -13,6 +13,7 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container
+builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 // Database
@@ -92,5 +93,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseHttpsRedirection();
+
+app.MapControllers();
 
 app.Run();

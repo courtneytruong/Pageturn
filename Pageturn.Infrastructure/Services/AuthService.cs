@@ -52,6 +52,7 @@ public class AuthService : IAuthService
         return new AuthResponseDto
         {
             AccessToken = accessToken,
+            RefreshToken = string.Empty,
             Username = user.Username
         };
     }
@@ -84,6 +85,7 @@ public class AuthService : IAuthService
         return new AuthResponseDto
         {
             AccessToken = accessToken,
+            RefreshToken = refreshToken,
             Username = user.Username
         };
     }
@@ -116,6 +118,7 @@ public class AuthService : IAuthService
         return new AuthResponseDto
         {
             AccessToken = accessToken,
+            RefreshToken = newRefreshToken,
             Username = user.Username
         };
     }
