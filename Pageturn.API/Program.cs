@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Pageturn.API.Middleware;
 using Pageturn.Core.Interfaces;
 using Pageturn.Infrastructure;
 using Pageturn.Infrastructure.Repositories;
@@ -68,6 +69,8 @@ using (var scope = app.Services.CreateScope())
 }
 
 // Configure the HTTP request pipeline
+app.UseMiddleware<ExceptionMiddleware>();
+
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
