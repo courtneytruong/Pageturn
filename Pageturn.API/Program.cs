@@ -31,6 +31,7 @@ builder.Services.AddScoped<IPostRepository, PostRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<GoogleBooksService>();
 builder.Services.AddScoped<IBookService, BookService>();
+builder.Services.AddScoped<IUserBookService, UserBookService>();
 
 // HttpClient
 builder.Services.AddHttpClient("GoogleBooks", client =>
