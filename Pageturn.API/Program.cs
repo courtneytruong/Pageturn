@@ -29,6 +29,13 @@ builder.Services.AddScoped<IPostRepository, PostRepository>();
 
 // Services
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<GoogleBooksService>();
+
+// HttpClient
+builder.Services.AddHttpClient("GoogleBooks", client =>
+{
+    client.BaseAddress = new Uri("https://www.googleapis.com/books/v1/");
+});
 
 // CORS
 var corsOrigin = builder.Configuration["CORS_ORIGIN"] ?? "http://localhost:5173";
