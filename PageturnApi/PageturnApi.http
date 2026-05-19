@@ -1,0 +1,6 @@
+@PageturnApi_HostAddress = http://localhost:5092
+
+GET {{PageturnApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
